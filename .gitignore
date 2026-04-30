@@ -1,0 +1,9 @@
+# Ignore local resume and images
+myres.pdf
+resume.png
+links.txt
+
+# Node / editor
+node_modules/
+.vscode/
+.DS_Store
