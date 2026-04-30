@@ -1,0 +1,72 @@
+{
+  "name": "Maruthavanan S V",
+  "summary": "Full-stack developer specializing in AI/ML integration, cloud platforms, and database optimization. Passionate about building intelligent systems that solve real-world problems.",
+  "about": "B.E. Computer Science student at Chennai Institute of Technology and Applied Research with expertise in Python, JavaScript, React, and cloud platforms. Experienced in building AI-powered applications, vector databases, and scalable web solutions.",
+  "focus": "Building AI-powered applications and full-stack web solutions",
+  "location": "India",
+  "email": "maruthavanansvv@gmail.com",
+  "github": "https://github.com/maruthu-05",
+  "linkedin": "https://www.linkedin.com/in/maruthavanan-s-v-437268291",
+  "resume": "myres.pdf",
+  "education": {
+    "school": "Chennai Institute of Technology and Applied Research",
+    "degree": "B.E. in Computer Science and Engineering",
+    "duration": "2023 - 2027",
+    "gpa": "8.56 / 10"
+  },
+  "skills": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "C / C++",
+    "React.js",
+    "Node.js",
+    "HTML / CSS",
+    "Tailwind CSS",
+    "MySQL",
+    "MongoDB",
+    "PostgreSQL",
+    "Firebase",
+    "REST API",
+    "GraphQL",
+    "Docker",
+    "AWS",
+    "Git",
+    "AI/ML",
+    "LLMs",
+    "RAG Systems",
+    "Vector Databases",
+    "Computer Vision"
+  ],
+  "projects": [
+    {
+      "title": "Database AI (DBAI)",
+      "description": "Web application integrating LLM to dynamically generate and execute database queries across MySQL and MongoDB. Optimizes query generation using LLM and provide outputs with prompts as inputs."
+    },
+    {
+      "title": "Personalized AI Assistant (RAG-based)",
+      "description": "Hybrid cloud-based RAG framework with SpringBoot backend, Pinecone vector storage, and Gemini API for intelligent response generation and deployment."
+    },
+    {
+      "title": "Driver Behavior Analysis System",
+      "description": "Real-time driver attention detection using computer vision (YOLO) and OpenAI models with phone detection, drowsiness alerts, and SOS notifications."
+    },
+    {
+      "title": "NAH - Virtual Coding Bootcamp Platform",
+      "description": "End-to-end collaborative coding platform built with React, Nginx, and JavaScript. Includes real-time code collaboration, project tracking, and dynamic layout management."
+    }
+  ],
+  "certifications": [
+    "Docker Foundation Certification",
+    "Networking Essentials (Cisco)",
+    "Python for Data Science and AI (IBM Coursera)",
+    "Data visualization with Tableau (Coursera)"
+    
+  ],
+  "achievements": [
+    "Shortlisted for TN-Skills competition (IT System Administration & Networking) - 2025",
+    "Finalist in oneDelhi Transport Stack Open Innovation Challenge with AI driver behavioral analysis solution",
+    "Finalist in Ideathon (VIT) - Greentech web application for waste management",
+    "Finalist in Nasscom Agent building hackathon"
+  ]
+}

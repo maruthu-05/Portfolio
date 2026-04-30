@@ -1,0 +1,12 @@
+name: Maruthavanan S V
+email: maruthavanansvv@gmail.com
+github: maruthu-05
+linkedin: maruthavanan-s-v-437268291
+resume: myres.pdf
+https://github.com/maruthu-05
+https://www.linkedin.com/in/maruthavanan-s-v-437268291
+
+coding platform ids:
+https://leetcode.com/u/Mvn123/
+https://codeforces.com/profile/maruthavanansv
+https://www.codechef.com/users/maruthavanansv
