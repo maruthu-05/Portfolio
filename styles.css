@@ -205,6 +205,44 @@ h2 {
   font-weight: 600;
 }
 
+.icon-button {
+  width: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.24);
+}
+
+.icon-button .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.resume-button {
+  width: auto;
+  min-width: 132px;
+  padding: 0 18px;
+  gap: 10px;
+}
+
+.resume-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .button:hover,
 .contact-link:hover {
   transform: translateY(-2px);
@@ -299,8 +337,18 @@ h2 {
 }
 
 .project-list {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 8px 22px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;
 }
 
 .link-grid {
@@ -333,17 +381,123 @@ h2 {
 }
 
 .project-item {
-  padding: 18px 20px;
+  position: relative;
+  padding: 24px 18px 22px;
+  flex: 0 0 calc((100% - 20px) / 1.5);
+  min-height: 440px;
+  scroll-snap-align: start;
+  touch-action: pan-x;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(165deg, rgba(8, 17, 31, 0.95), rgba(10, 21, 36, 0.92)) padding-box,
+    linear-gradient(130deg, rgba(95, 226, 212, 0.98), rgba(125, 211, 252, 0.88), rgba(255, 166, 94, 0.92), rgba(95, 226, 212, 0.98)) border-box;
+  background-size: 100% 100%, 250% 250%;
+  border-radius: 22px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+  animation: cardFloat 5.8s ease-in-out infinite, borderFlow 7s linear infinite;
+}
+
+.project-item::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 22px;
+  pointer-events: none;
+  box-shadow: 0 0 26px rgba(95, 226, 212, 0.24);
+}
+
+.project-item:nth-child(2n) {
+  animation-delay: 0.7s;
+}
+
+.project-item:nth-child(3n) {
+  animation-delay: 1.2s;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.42), 0 0 30px rgba(95, 226, 212, 0.25);
+}
+
+.project-badge {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d5fff6;
+  border: 4px solid rgba(95, 226, 212, 0.88);
+  background:
+    radial-gradient(circle at 35% 30%, rgba(95, 226, 212, 0.35), transparent 48%),
+    radial-gradient(circle at 65% 70%, rgba(125, 211, 252, 0.22), transparent 45%),
+    rgba(5, 12, 23, 0.95);
+  box-shadow: 0 0 0 6px rgba(95, 226, 212, 0.15);
+}
+
+.project-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .project-item h3 {
-  margin: 0 0 6px;
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 1.18rem;
 }
 
 .project-item p {
-  margin: 0;
+  margin: 10px 0 0;
   color: var(--muted);
+  text-align: center;
+  line-height: 1.55;
+}
+
+.project-stack {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(125, 211, 252, 0.12);
+  border-radius: 999px;
+  padding: 5px 10px;
+  letter-spacing: 0.02em;
+}
+
+.project-highlights {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.project-highlights li {
+  position: relative;
+  padding-left: 14px;
+  color: #dbe7ff;
+  line-height: 1.45;
+  font-size: 0.92rem;
+}
+
+.project-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.56em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
 }
 
 .contact-row {
@@ -402,6 +556,25 @@ h2 {
   }
 }
 
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes borderFlow {
+  from {
+    background-position: 0 0, 0% 50%;
+  }
+  to {
+    background-position: 0 0, 100% 50%;
+  }
+}
+
 @media (max-width: 920px) {
   .hero,
   .content-grid {
@@ -434,5 +607,19 @@ h2 {
 
   .link-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-item {
+    flex-basis: calc((100% - 14px) / 1.15);
+    min-height: 430px;
+    padding: 22px 16px 20px;
+  }
+
+  .project-header {
+    gap: 8px;
+  }
+
+  .project-stack {
+    white-space: normal;
   }
 }

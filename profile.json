@@ -4,7 +4,7 @@
   "about": "B.E. Computer Science student at Chennai Institute of Technology and Applied Research with expertise in Python, JavaScript, React, and cloud platforms. Experienced in building AI-powered applications, vector databases, and scalable web solutions.",
   "focus": "Building AI-powered applications and full-stack web solutions",
   "location": "India",
-  "email": "maruthavanansvv@gmail.com",
+  "email": "maruthavanansvceo@gmail.com",
   "github": "https://github.com/maruthu-05",
   "linkedin": "https://www.linkedin.com/in/maruthavanan-s-v-437268291",
   "resume": "https://drive.google.com/file/d/1kc_q449QHA7Iwcb-cXXS3DX6CC40jR6n/view?usp=drivesdk",
@@ -41,19 +41,43 @@
   "projects": [
     {
       "title": "Database AI (DBAI)",
-      "description": "Web application integrating LLM to dynamically generate and execute database queries across MySQL and MongoDB. Optimizes query generation using LLM and provide outputs with prompts as inputs."
+      "description": "AI-powered database assistant that converts natural language prompts into safe and optimized MySQL and MongoDB queries for multi-database environments.",
+      "stack": "Node.js, Express, Python, Supabase",
+      "highlights": [
+        "Designed a scalable backend with encrypted credential handling and schema-aware query generation.",
+        "Implemented guardrails to avoid destructive queries while supporting query, table, and CSV output formats.",
+        "Built intelligent query synthesis workflows focused on performance, compliance, and reliable data retrieval."
+      ]
     },
     {
       "title": "Personalized AI Assistant (RAG-based)",
-      "description": "Hybrid cloud-based RAG framework with SpringBoot backend, Pinecone vector storage, and Gemini API for intelligent response generation and deployment."
+      "description": "Context-aware RAG assistant that answers personalized questions by combining document understanding with semantic retrieval and generative AI responses.",
+      "stack": "Spring Boot, Kotlin, Pinecone, Gemini API",
+      "highlights": [
+        "Developed a Retrieval-Augmented Generation pipeline for personalized and context-specific assistance.",
+        "Integrated document ingestion with Pinecone vector storage for high-quality semantic retrieval.",
+        "Enabled interactive desktop usage with search, summarization, and voice-ready response flows."
+      ]
     },
     {
       "title": "Driver Behavior Analysis System",
-      "description": "Real-time driver attention detection using computer vision (YOLO) and OpenAI models with phone detection, drowsiness alerts, and SOS notifications."
+      "description": "Real-time computer vision safety system that monitors driver attention and triggers alerts for risky behavior and emergency scenarios.",
+      "stack": "OpenCV, TensorFlow, YOLO, AI Models",
+      "highlights": [
+        "Implemented distraction and drowsiness detection using OpenVINO and YOLO-based pipelines.",
+        "Added phone-usage detection, speed-limit checks, and SOS event detection for faster recovery actions.",
+        "Designed a behavior scoring engine that stores session metrics and supports digital nudges for improvement."
+      ]
     },
     {
       "title": "NAH - Virtual Coding Bootcamp Platform",
-      "description": "End-to-end collaborative coding platform built with React, Nginx, and JavaScript. Includes real-time code collaboration, project tracking, and dynamic layout management."
+      "description": "Collaborative virtual bootcamp platform for coding practice, team-based delivery, and streamlined project workflows.",
+      "stack": "Next.js, Supabase, Tailwind CSS, Framer Motion",
+      "highlights": [
+        "Built collaborative project tools including profile editing, team formation, and project declaration pages.",
+        "Added certificate generation and dynamic project display experiences for learners and mentors.",
+        "Deployed on Vercel with Supabase authentication and storage, with motion-driven UI transitions."
+      ]
     }
   ],
   "certifications": [

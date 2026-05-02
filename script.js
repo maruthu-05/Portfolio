@@ -174,13 +174,43 @@ function renderProjects(projects) {
     const item = document.createElement("article");
     item.className = "project-item";
 
+    const badge = document.createElement("div");
+    badge.className = "project-badge";
+    badge.textContent = (project.title.match(/[A-Za-z]/) || ["P"])[0].toUpperCase();
+
+    const header = document.createElement("div");
+    header.className = "project-header";
+
     const title = document.createElement("h3");
     title.textContent = project.title;
+
+    if (project.stack) {
+      const stack = document.createElement("p");
+      stack.className = "project-stack";
+      stack.textContent = project.stack;
+      header.append(title, stack);
+    } else {
+      header.append(title);
+    }
 
     const description = document.createElement("p");
     description.textContent = project.description;
 
-    item.append(title, description);
+    item.append(badge, header, description);
+
+    if (Array.isArray(project.highlights) && project.highlights.length > 0) {
+      const highlights = document.createElement("ul");
+      highlights.className = "project-highlights";
+
+      project.highlights.forEach((point) => {
+        const li = document.createElement("li");
+        li.textContent = point;
+        highlights.appendChild(li);
+      });
+
+      item.appendChild(highlights);
+    }
+
     list.appendChild(item);
   });
 }
@@ -280,9 +310,9 @@ async function main() {
   setText("email-link", profile.email);
   setText("projects-count", String(profile.projects.length).padStart(2, "0"));
 
-  setLink("github-link", profile.github, "GitHub");
-  setLink("linkedin-link", profile.linkedin, "LinkedIn");
-  setLink("resume-link", profile.resume, "Resume");
+  setLink("github-link", profile.github);
+  setLink("linkedin-link", profile.linkedin);
+  setLink("resume-link", profile.resume);
   setLink("portfolio-link", profile.resume, "Download resume");
   setLink("email-link", `mailto:${profile.email}`, profile.email);
 
